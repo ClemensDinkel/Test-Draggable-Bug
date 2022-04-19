@@ -1,22 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Draggable from 'react-draggable';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Draggable>
+          <div style={{width: "100px", height: "100px", border: "4px white", borderRadius: "8px", background: "aquamarine", cursor: "grab"}}>
+            <button onPointerDown={()=> console.log("test")} style={{cursor: "pointer"}}>TEST</button>
+          </div>
+        </Draggable>
       </header>
     </div>
   );
